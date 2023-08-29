@@ -20,6 +20,7 @@ body {
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -31,56 +32,75 @@ html {
 }
 
 /* Navbar styles */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* background-color: #000; */
-  color: white;
-  padding: 2rem;
-  /* position: fixed; */
-  /* width: 100%; */
-}
 
-.logo img {
+.header__logo img {
   /* font-size: 24px; */
   width: 6rem;
   height: 3rem;
   cursor: pointer;
 }
 
-.nav-links {
-  list-style: none;
+a {
+  text-decoration: none;
+  color: #a9afc3;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 10vh;
+  /* background-color: #c1c1c1; */
+}
+
+.header__menu {
   display: flex;
 }
 
-.nav-links li {
-  margin-right: 2rem;
+[class^="navLink-"] {
+  padding-left: 20px;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #a9afc3;
-  font-size: 1.6rem;
-  font-weight: 500;
-}
-
-.nav-links a:hover {
-  color: #d6002f;
-}
-/* Burger menu for small screens */
-.burger {
+.header__btn {
   display: none;
-  flex-direction: column;
-  cursor: pointer;
 }
 
-.burger i {
-  font-size: 35px;
+@media screen and (max-width: 768px) {
+  .header {
+    /*     justify-content: center; */
+    background-color: #201d29;
+  }
+
+  .header__btn {
+    display: flex;
+    font-size: 30px;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  .header__menu {
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 10vh;
+    width: 100%;
+    /*     gap: 20px; */
+    justify-content: space-evenly;
+    height: 90vh;
+    background-color: #201d29;
+    transition: all 0.5s ease;
+  }
 }
 
-.burger i:hover {
-  color: #a9afc3;
+.hide {
+  display: none;
+}
+
+.slide {
+  right: -100%;
 }
 
 .btn {
@@ -94,28 +114,6 @@ html {
   border-color: #d6002f;
   color: #d6002f;
   cursor: pointer;
-}
-
-/* Media query for responsive design */
-@media screen and (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background-color: #333;
-    width: 100%;
-    text-align: center;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .burger {
-    display: flex;
-  }
 }
 
 .name {
