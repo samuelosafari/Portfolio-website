@@ -906,6 +906,7 @@ input {
 
 .err {
   color: red;
+  display: block;
 }
 
 [class^="navLink-"] a:hover {

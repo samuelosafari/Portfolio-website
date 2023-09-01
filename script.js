@@ -125,20 +125,34 @@ window.addEventListener("scroll", function () {
 });
 
 //form validation
-let contactForm = document.getElementById("contact-form");
-let name = document.getElementById("name");
+let form = document.getElementById("form");
+let userName = document.getElementById("name");
 let email = document.getElementById("email");
 let subject = document.getElementById("subject");
 let message = document.getElementById("message");
-let errMessage = document.getElementById("email-err");
+let errMessage = document.getElementsByClassName("err");
 
-contactForm.addEventListener("submit", (e) => {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
-  formValidation();
-});
 
-let formValidation = () => {
-  if (name.value === "") {
-    errMessage.innerHTML = "cannot be blank";
+  if (userName.value.trim() === "") {
+    errMessage[0].innerHTML = "name cannot be blank";
+  } else {
+    errMessage[0].innerHTML = "";
   }
-};
+  if (email.value.trim() === "") {
+    errMessage[1].innerHTML = "Email cannot be blank";
+  } else {
+    errMessage[1].innerHTML = "";
+  }
+  if (subject.value.trim() === "") {
+    errMessage[2].innerHTML = "Subject cannot be blank";
+  } else {
+    errMessage[2].innerHTML = "";
+  }
+  if (message.value.trim() === "") {
+    errMessage[3].innerHTML = "Message cannot be blank";
+  } else {
+    errMessage[3].innerHTML = "";
+  }
+});
