@@ -59,3 +59,86 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
+//carousel
+document.addEventListener("DOMContentLoaded", function () {
+  const testimonialContainer = document.querySelector(".media-container");
+  const prevButton = document.querySelector(".previous-icon");
+  const nextButton = document.querySelector(".next-icon");
+
+  const testimonials = testimonialContainer.querySelectorAll(".media");
+
+  let currentTestimonialIndex = 0;
+
+  function showTestimonial(index) {
+    testimonials.forEach((testimonial, i) => {
+      testimonial.classList.toggle("active", i === index);
+    });
+  }
+
+  prevButton.addEventListener("click", function () {
+    currentTestimonialIndex =
+      (currentTestimonialIndex - 1 + testimonials.length) % testimonials.length;
+    showTestimonial(currentTestimonialIndex);
+  });
+
+  nextButton.addEventListener("click", function () {
+    currentTestimonialIndex =
+      (currentTestimonialIndex + 1) % testimonials.length;
+    showTestimonial(currentTestimonialIndex);
+  });
+
+  // Show the initial testimonial
+  showTestimonial(currentTestimonialIndex);
+});
+
+//the portfolio project
+
+document.addEventListener("DOMContentLoaded", () => {
+  const pictures = document.querySelectorAll(".picture");
+
+  pictures.forEach((picture) => {
+    const img = picture.querySelector("img");
+    const overlay = picture.querySelector(".overlay");
+
+    picture.addEventListener("mouseover", () => {
+      img.style.opacity = 0.7;
+      overlay.style.opacity = 1;
+    });
+
+    picture.addEventListener("mouseout", () => {
+      img.style.opacity = 1;
+      overlay.style.opacity = 0;
+    });
+  });
+});
+
+//nav bar scrolled
+
+window.addEventListener("scroll", function () {
+  var header = document.querySelector(".header");
+  if (window.scrollY > 0) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
+
+//form validation
+let contactForm = document.getElementById("contact-form");
+let name = document.getElementById("name");
+let email = document.getElementById("email");
+let subject = document.getElementById("subject");
+let message = document.getElementById("message");
+let errMessage = document.getElementById("email-err");
+
+contactForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  formValidation();
+});
+
+let formValidation = () => {
+  if (name.value === "") {
+    errMessage.innerHTML = "cannot be blank";
+  }
+};
