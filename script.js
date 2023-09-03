@@ -92,6 +92,36 @@ let personAddress = document.getElementById("person-address");
 let prevBtn = document.getElementById("prev-btn");
 let nextBtn = document.getElementById("next-btn");
 
+let currentItem = 0;
+
+window.addEventListener("DOMContentLoaded", () => {
+  showPerson(currentItem);
+});
+
+let showPerson = (person) => {
+  let items = reviews[person];
+  image.src = items.img;
+  text.textContent = items.text;
+  personName.textContent = items.name;
+  personAddress.textContent = items.address;
+};
+
+nextBtn.addEventListener("click", () => {
+  currentItem++;
+  if (currentItem > reviews.length - 1) {
+    currentItem = 0;
+  }
+  showPerson(currentItem);
+});
+
+prevBtn.addEventListener("click", () => {
+  currentItem--;
+  if (currentItem < 0) {
+    currentItem = reviews.length - 1;
+  }
+  showPerson(currentItem);
+});
+
 //the portfolio project
 
 document.addEventListener("DOMContentLoaded", () => {
