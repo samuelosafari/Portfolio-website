@@ -62,6 +62,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //carousel
 
+//selecting elements
+
+const reviews = [
+  {
+    img: "assets/dapoabideen.jpg",
+    name: "Habimana Jean",
+    text: "Sriracha literally flexitarian irony, vape marfa unicorn. Glossier tattooed 8-bit, fixie waistcoat offal activated charcoal slow-carb marfa hell of pabst raclette post-ironic jianbing swag.",
+    address: "Kirehe, Rwanda",
+  },
+  {
+    img: "assets/oldman.jpg",
+    name: "Karara Salomon",
+    text: "I'm baby meggings twee health goth +1. Bicycle rights tumeric chartreuse before they sold out chambray pop-up. Shaman humblebrag pickled coloring book salvia hoodie, cold-pressed four dollar toast everyday carry",
+    address: "Mukarange, Kayonza",
+  },
+  {
+    img: "assets/smilingcustomer.jpg",
+    name: "Uwera Claire",
+    text: "Helvetica artisan kinfolk thundercats lumbersexual blue bottle. Disrupt glossier gastropub deep v vice franzen hell of brooklyn twee enamel pin fashion axe.photo booth jean shorts artisan narwhal.",
+    address: "Kimihurura, Kigali",
+  },
+];
+
+let image = document.getElementById("person-img");
+let text = document.getElementById("testimonial-text");
+let personName = document.getElementById("person-name");
+let personAddress = document.getElementById("person-address");
+let prevBtn = document.getElementById("prev-btn");
+let nextBtn = document.getElementById("next-btn");
+
 //the portfolio project
 
 document.addEventListener("DOMContentLoaded", () => {
