@@ -61,36 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //carousel
-document.addEventListener("DOMContentLoaded", function () {
-  const testimonialContainer = document.querySelector(".media-container");
-  const prevButton = document.querySelector(".previous-icon");
-  const nextButton = document.querySelector(".next-icon");
-
-  const testimonials = testimonialContainer.querySelectorAll(".media");
-
-  let currentTestimonialIndex = 0;
-
-  function showTestimonial(index) {
-    testimonials.forEach((testimonial, i) => {
-      testimonial.classList.toggle("active", i === index);
-    });
-  }
-
-  prevButton.addEventListener("click", function () {
-    currentTestimonialIndex =
-      (currentTestimonialIndex - 1 + testimonials.length) % testimonials.length;
-    showTestimonial(currentTestimonialIndex);
-  });
-
-  nextButton.addEventListener("click", function () {
-    currentTestimonialIndex =
-      (currentTestimonialIndex + 1) % testimonials.length;
-    showTestimonial(currentTestimonialIndex);
-  });
-
-  // Show the initial testimonial
-  showTestimonial(currentTestimonialIndex);
-});
 
 //the portfolio project
 
