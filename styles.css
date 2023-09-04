@@ -107,7 +107,7 @@ a {
   border: 2px solid #a9afc3;
   padding: 0.7rem 1.5rem;
   border-radius: 10px;
-  background-color: black;
+  background-color: transparent;
   color: #fff;
 }
 .btn:hover {
@@ -134,7 +134,7 @@ a {
 
 .hero {
   background-color: #000;
-  height: auto;
+  min-height: 100vh;
 }
 
 .main {
@@ -143,6 +143,7 @@ a {
   justify-content: space-between;
   /* align-items: center; */
   padding: 0 4rem;
+  margin-top: 6rem;
 }
 
 .mobile-social li {
@@ -182,7 +183,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 5rem;
+    padding-top: 1rem;
   }
   .wow {
     width: 100%;
