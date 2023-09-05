@@ -841,9 +841,10 @@ input {
   background-color: #1d1d2b;
   padding: 20px 50px;
   /* margin: 0 4rem; */
-  height: 70vh;
+  height: 80vh;
   width: 90%;
   text-align: center;
+  overflow-y: scroll;
 }
 
 .hide {
@@ -916,4 +917,27 @@ input {
 
 [class^="navLink-"] a:hover {
   color: #d6002f;
+}
+
+/* .image-holder {
+  width: 500px;
+  height: 400px;
+} */
+
+.image-holder img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 3rem 0;
+}
+
+.modal h1,
+h2 {
+  color: #fff;
+}
+
+.modal ul {
+  text-align: left;
+  margin: 2rem 0;
 }
