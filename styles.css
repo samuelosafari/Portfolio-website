@@ -660,6 +660,9 @@ a {
   margin-bottom: 2rem;
 }
 
+.single__address P {
+  color: #fff;
+}
 .contact-icons {
   font-size: 30px;
   color: #d6002f;

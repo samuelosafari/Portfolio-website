@@ -68,19 +68,19 @@ const reviews = [
   {
     img: "assets/dapoabideen.jpg",
     name: "Habimana Jean",
-    text: "Sriracha literally flexitarian irony, vape marfa unicorn. Glossier tattooed 8-bit, fixie waistcoat offal activated charcoal slow-carb marfa hell of pabst raclette post-ironic jianbing swag.",
+    text: "As a delighted customer, I enthusiastically endorse their services, praising their exceptional dedication, innovation, and remarkable outcomes in web development.",
     address: "Kirehe, Rwanda",
   },
   {
     img: "assets/oldman.jpg",
     name: "Karara Salomon",
-    text: "I'm baby meggings twee health goth +1. Bicycle rights tumeric chartreuse before they sold out chambray pop-up. Shaman humblebrag pickled coloring book salvia hoodie, cold-pressed four dollar toast everyday carry",
+    text: "Working with them has been an absolute pleasure. Their professionalism, creativity, and commitment to excellence shine through in every project. Highly recommended for top-notch web development!",
     address: "Mukarange, Kayonza",
   },
   {
     img: "assets/smilingcustomer.jpg",
     name: "Uwera Claire",
-    text: "Helvetica artisan kinfolk thundercats lumbersexual blue bottle. Disrupt glossier gastropub deep v vice franzen hell of brooklyn twee enamel pin fashion axe.photo booth jean shorts artisan narwhal.",
+    text: "They exceeded my expectations! Their dedication to detail and unique approach transformed my vision into an exceptional website. A team that truly cares about your success. Highly recommended.",
     address: "Kimihurura, Kigali",
   },
 ];
