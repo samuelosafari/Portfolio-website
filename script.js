@@ -163,8 +163,6 @@ let message = document.getElementById("message");
 let errMessage = document.getElementsByClassName("err");
 
 form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
   if (userName.value.trim() === "") {
     errMessage[0].innerHTML = "name cannot be blank";
   } else {

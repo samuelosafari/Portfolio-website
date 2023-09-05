@@ -493,23 +493,42 @@
             projects
           </p>
           <h3>Development work or partnerships</h3>
-          <form id="form">
+          <form
+            action="https://formspree.io/f/xqkvbdpn"
+            method="POST"
+            id="form"
+          >
             <div class="form-group">
-              <input id="name" type="text" placeholder="Name*" />
+              <input id="name" name="name" type="text" placeholder="Name*" />
               <div class="err" id="email-err"></div>
             </div>
             <div class="form-row">
               <div class="form-group">
-                <input id="email" type="email" placeholder="Email*" />
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="Email*"
+                />
                 <div class="err" id="email-err"></div>
               </div>
               <div class="form-group">
-                <input id="subject" type="text" placeholder="Subject*" />
+                <input
+                  id="subject"
+                  name="subject"
+                  type="text"
+                  placeholder="Subject*"
+                />
                 <div class="err" id="email-err"></div>
               </div>
             </div>
             <div class="form-group">
-              <input id="message" type="text" placeholder="Message*" />
+              <input
+                id="message"
+                name="message"
+                type="text"
+                placeholder="Message*"
+              />
               <div class="err" id="email-err"></div>
             </div>
             <button type="submit" class="btn final">Submit</button>
